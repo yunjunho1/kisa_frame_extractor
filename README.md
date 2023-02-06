@@ -1,5 +1,5 @@
 ### Run
-python extract.py --core 10
+python extract.py --core 10 --n_samples=10000
 
 ### labels.csv
 video_name, start, end
