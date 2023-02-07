@@ -51,7 +51,7 @@ for i in range(len(labels)):
     end = time_converter(labels.iloc[i]["end"], args.fps)
     N = end-start
     new_labels.loc[i] = [vname, start, end, N]
-n = 10000/len(new_labels)
+n = args.n_samples/len(new_labels)
 df1 = new_labels[new_labels["N"]<n]
 remain = args.n_samples-np.sum(df1["N"])
 df2 = new_labels[new_labels["N"]>=n]
